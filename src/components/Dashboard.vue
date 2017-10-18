@@ -1,8 +1,9 @@
 <template>
   <div class="host">
     <div class="main-content">
-      <p class="title">Assign a user to a shift</p>
-      <router-link :to="{ name: 'users'}">Link User</router-link>
+      <h2 class="app-title">Temper</h2>
+      <p class="call-to-action"><b>Assign a user to a shift</b></p>
+      <router-link class="btn" :to="{ name: 'users'}"><b>Link User</b></router-link>
     </div>  
     <router-view/>
   </div>
@@ -31,6 +32,16 @@ export default {
   left: 0;
   right: 0;
 }
+.app-title{
+  color: #5bbf89;
+  margin-top: 1rem;
+}
+.call-to-action{
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+/*---Global styles for the panel----*/
 .panel{
   background-color: rgba(2, 21, 21, 0.79);
   -webkit-box-shadow: 1px 1px 1px #ccc;
@@ -66,8 +77,15 @@ export default {
   height: 100%;
   background-color: darkcyan;
 }
-.title{
-  padding-top: 1rem;
-}
 
+/*----Global styles for the button---*/
+.btn{
+  background-color: #5bbf89;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  border: 1px;
+  font-size: 0.85rem;
+  color: #181919;
+  text-decoration: none;
+}
 </style>

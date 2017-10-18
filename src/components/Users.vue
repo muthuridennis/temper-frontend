@@ -10,6 +10,8 @@
         <li><router-link :to="{ name: 'user', params: { name: 'James' }}">James</router-link></li>
         <li><router-link :to="{ name: 'user', params: { name: 'John' }}">John</router-link></li>
       </ul>
+      
+      <router-link class="btn" :to="{ name: 'new-user' }"><b>Add User</b></router-link>
     </div>
   </div>
 </template>
@@ -30,11 +32,19 @@ export default {
   margin: 0px;
   padding: 0px;
   list-style: none;
-}
-.user-list__names li{
-  padding: 1rem 0;
+  margin-bottom: 1.5rem;
 }
 .user-list__names li a{
- color: #5bbf89; 
+  width: 100%;
+  display: block;
+  padding: 1rem 0 1rem;
+  border-bottom: 1px solid; 
+  color: #052d2d;
+  font-weight: 500;
+  text-decoration: none;
+}
+.user-list__names li a:hover{
+  background-color: #052d2d;
+  color: #008b8b; 
 }
 </style>
